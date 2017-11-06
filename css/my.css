@@ -22,6 +22,26 @@ body span.fa-icon i {
 body img {
   max-width: 100%;
 }
+/*************各部分标题和标题后的短线****************/
+#feature,
+#mobile-portal {
+  padding: 70px 0;
+}
+#feature h2,
+#mobile-portal h2 {
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: .1em;
+}
+#feature h2::after,
+#mobile-portal h2::after {
+  content: '';
+  display: block;
+  background-color: #0094f2;
+  width: 80px;
+  height: 3px;
+  margin: 30px auto 0;
+}
 /************顶部导航栏***************/
 #header {
   width: 100%;
@@ -39,7 +59,6 @@ body img {
 /**************中部标语、效果图**************/
 #main {
   width: 100%;
-  height: 676px;
   box-sizing: border-box;
   padding-top: 80px;
 }
@@ -70,6 +89,7 @@ body img {
 }
 #main #slide-img {
   text-align: center;
+  padding-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
   #slogan {
@@ -79,37 +99,35 @@ body img {
 /**********功能特色**********/
 #feature {
   background-color: #fff;
-  padding: 70px 0;
-  /************功能标题*************/
+  /************图标外的圆环*************/
 }
-#feature h2 {
-  text-align: center;
-  font-size: 34px;
-  letter-spacing: .1em;
+#feature div.icon-wrap-circle {
+  border-radius: 50%;
+  border: 1px solid #0094f2;
+  padding: 3px;
 }
-#feature h2::after {
-  content: '';
-  display: block;
-  background-color: #0094f2;
-  width: 80px;
-  height: 3px;
-  margin: 30px auto 0;
-}
-#feature #feature-left {
+#feature .feature-col {
   padding-top: 50px;
 }
-#feature #feature-left .feature-left-item {
+#feature .feature-col .feature-item {
   margin-bottom: 70px;
 }
-#feature #feature-left .feature-left-item .feature-left-text {
-  margin-right: 70px;
-  text-align: right;
+#feature .feature-col .feature-item span.fa-icon:hover {
+  color: #0094f2;
+  background-color: #fff;
 }
-#feature #feature-left .feature-left-item .feature-left-text p {
+#feature .feature-col .feature-item p {
   color: #868686;
 }
-#feature #feature-left .feature-left-item span {
+#feature #feature-left .feature-left-item div.icon-wrap-circle {
+  margin-left: 15px;
   float: right;
+}
+#feature #feature-left .feature-left-item div.icon-wrap-circle span {
+  float: right;
+}
+#feature #feature-left .feature-left-item .feature-left-text {
+  text-align: right;
 }
 #feature #feature-center {
   text-align: center;
@@ -117,19 +135,61 @@ body img {
 #feature #feature-center img {
   width: 294px;
 }
-#feature #feature-right {
-  padding-top: 50px;
+#feature #feature-right .feature-right-item div.icon-wrap-circle {
+  margin-right: 15px;
+  float: left;
 }
-#feature #feature-right .feature-right-item {
-  margin-bottom: 70px;
+#feature #feature-right .feature-right-item div.icon-wrap-circle span {
+  float: left;
 }
-#feature #feature-right .feature-right-item .feature-left-text {
-  margin-left: 70px;
+#feature #feature-right .feature-right-item .feature-right-text {
   text-align: left;
 }
-#feature #feature-right .feature-right-item .feature-left-text p {
-  color: #868686;
+@media screen and (max-width: 992px) {
+  #feature .feature-col .feature-item {
+    text-align: center !important;
+  }
+  #feature .feature-col .feature-item .feature-item-text {
+    text-align: center !important;
+  }
+  #feature .feature-col .feature-item div.icon-wrap-circle {
+    float: none !important;
+    display: inline-block;
+    margin: 0 !important;
+  }
 }
-#feature #feature-right .feature-right-item span {
-  float: left;
+/**********IT Mobile Portal介绍**********/
+#mobile-portal {
+  background-color: #F6F8FA;
+}
+#mobile-portal p.sub-title {
+  text-align: center;
+  color: #868686;
+  margin: 20px 0 60px;
+}
+#mobile-portal .mobile-portal-item .img-wrap {
+  position: relative;
+}
+#mobile-portal .mobile-portal-item .img-wrap img {
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0;
+}
+#mobile-portal .mobile-portal-item .img-wrap span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+}
+#mobile-portal .mobile-portal-item .img-wrap span.android {
+  background-color: #92b93a;
+}
+#mobile-portal .mobile-portal-item h3 {
+  font-size: 18px;
+  text-align: center;
+}
+#mobile-portal .mobile-portal-item p.item-title {
+  color: #868686;
+  text-align: center;
 }
