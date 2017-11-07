@@ -28,7 +28,7 @@ body {
   }
 }
 /*************各部分标题和标题后的短线****************/
-#feature , #mobile-portal {
+#feature , #mobile-portal , #carousel-slider{
   //background-color: #fff;
   padding: 70px 0;
   h2 {
@@ -188,24 +188,76 @@ body {
     margin: 20px 0 60px;
   }
   .mobile-portal-item {
-    .img-wrap {
-      position: relative;
-      img {
+    margin-bottom: 35px;
+    .img-circle {
+      text-align: center;
+      .img-wrap {
+        position: relative;
         display: inline-block;
-        border-radius: 50%;
-        margin: 0;
-      }
-      span {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 40px;
-        height: 40px;
-      }
-      span.android {
-        background-color: @android-color;
+        &:hover .img-info {
+          display: block;
+        }
+        img {
+          display: block;
+          border-radius: 50%;
+        }
+        span {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 40px;
+          height: 40px;
+        }
+        span.android {
+          background-color: @android-color;
+        }
+        span.ios {
+          background-color: @ios-color;
+          z-index: 99;
+        }
+        span.fa-icon + span.fa-icon {
+          bottom: 46px;
+        }
+        div.img-info {
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-color: #2879bc;
+          text-align: center;
+          opacity: 0.85;
+          h3 {
+            color: #fff;
+            position: relative;
+            top: 20%;
+            font-size: 22px;
+          }
+          div.img-info-button {
+            position: absolute;
+            //width: 200px;
+            //margin: 0 auto;
+            top: 52%;
+            left: 50%;
+            //margin-left: -25px;
+            //margin-top: -10px;
+            transform: translate(-50%,-50%);
+            a {
+              color: #fff;
+              display: block;
+              text-decoration: none;
+              font-size: 16px;
+              &:hover {
+                color: @android-color;
+              }
+            }
+          }
+        }
       }
     }
+
     h3 {
       font-size: 18px;
       text-align: center;
@@ -215,4 +267,8 @@ body {
       text-align: center;
     }
   }
+}
+/**********carousel-slider***********/
+#carousel-slider {
+  background-color: #fff;
 }

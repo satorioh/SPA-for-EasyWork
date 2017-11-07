@@ -24,17 +24,20 @@ body img {
 }
 /*************各部分标题和标题后的短线****************/
 #feature,
-#mobile-portal {
+#mobile-portal,
+#carousel-slider {
   padding: 70px 0;
 }
 #feature h2,
-#mobile-portal h2 {
+#mobile-portal h2,
+#carousel-slider h2 {
   text-align: center;
   font-size: 34px;
   letter-spacing: .1em;
 }
 #feature h2::after,
-#mobile-portal h2::after {
+#mobile-portal h2::after,
+#carousel-slider h2::after {
   content: '';
   display: block;
   background-color: #0094f2;
@@ -167,23 +170,72 @@ body img {
   color: #868686;
   margin: 20px 0 60px;
 }
-#mobile-portal .mobile-portal-item .img-wrap {
+#mobile-portal .mobile-portal-item {
+  margin-bottom: 35px;
+}
+#mobile-portal .mobile-portal-item .img-circle {
+  text-align: center;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap {
   position: relative;
-}
-#mobile-portal .mobile-portal-item .img-wrap img {
   display: inline-block;
-  border-radius: 50%;
-  margin: 0;
 }
-#mobile-portal .mobile-portal-item .img-wrap span {
+#mobile-portal .mobile-portal-item .img-circle .img-wrap:hover .img-info {
+  display: block;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap img {
+  display: block;
+  border-radius: 50%;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap span {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 40px;
   height: 40px;
 }
-#mobile-portal .mobile-portal-item .img-wrap span.android {
+#mobile-portal .mobile-portal-item .img-circle .img-wrap span.android {
   background-color: #92b93a;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap span.ios {
+  background-color: #d55485;
+  z-index: 99;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap span.fa-icon + span.fa-icon {
+  bottom: 46px;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap div.img-info {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: #2879bc;
+  text-align: center;
+  opacity: 0.85;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap div.img-info h3 {
+  color: #fff;
+  position: relative;
+  top: 20%;
+  font-size: 22px;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap div.img-info div.img-info-button {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap div.img-info div.img-info-button a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+}
+#mobile-portal .mobile-portal-item .img-circle .img-wrap div.img-info div.img-info-button a:hover {
+  color: #92b93a;
 }
 #mobile-portal .mobile-portal-item h3 {
   font-size: 18px;
@@ -192,4 +244,8 @@ body img {
 #mobile-portal .mobile-portal-item p.item-title {
   color: #868686;
   text-align: center;
+}
+/**********carousel-slider***********/
+#carousel-slider {
+  background-color: #fff;
 }
