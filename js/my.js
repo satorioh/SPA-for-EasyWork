@@ -31,4 +31,12 @@ $('.carousel-slider-content').each(function() {
       }
     ]
   });
+}).on('afterChange', function() {
+  $(window).trigger('resize.px.parallax');
+});
+
+$(window).resize(function() {
+  setTimeout(function() {
+    $(window).trigger('resize.px.parallax');
+  }, 100);
 });

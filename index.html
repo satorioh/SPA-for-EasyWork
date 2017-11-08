@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/my.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,64 +24,66 @@
   <![endif]-->
 </head>
 <body>
-<!--顶部导航栏-->
-<div id="header">
-  <nav class="navbar navbar-default">
+<div class="parallax-img" data-parallax="scroll" data-speed="0.2" data-natural-width="1920" data-natural-height="1080" data-image-src="img/header-app-image.jpg">
+  <!--顶部导航栏-->
+  <div id="header">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://221.224.163.13/">
+            <img src="img/logo.png">
+          </a>
+          <a data-toggle="collapse" href="#my-menu" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </div>
+        <div id="my-menu" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#my-menu">首页</a></li>
+            <li><a href="#feature">功能</a></li>
+            <li><a href="#mobile-portal">IT Mobile Portal</a></li>
+            <li><a href="#carousel-slider">预览</a></li>
+            <li><a href="#">下载</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--中部标语、大效果图-->
+  <div id="main">
     <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="http://221.224.163.13/">
-          <img src="img/logo.png">
-        </a>
-        <a data-toggle="collapse" href="#my-menu" class="navbar-toggle">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-      </div>
-      <div id="my-menu" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">首页</a></li>
-          <li><a href="#">功能</a></li>
-          <li><a href="#">IT Mobile Portal</a></li>
-          <li><a href="#">预览</a></li>
-          <li><a href="#">下载</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-<!--中部标语、大效果图-->
-<div id="main">
-  <div class="container">
-    <!--slogan和大效果图，分两列-->
-    <div class="row">
-      <!--左侧标语-->
-      <div id="slogan" class="col-sm-6 col-xs-12">
-        <!--Your mobile office with和ASUS EasyWork分为两列-->
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>
-              <!--手机图标-->
-              <span class="fa-icon">
+      <!--slogan和大效果图，分两列-->
+      <div class="row">
+        <!--左侧标语-->
+        <div id="slogan" class="col-sm-6 col-xs-12">
+          <!--Your mobile office with和ASUS EasyWork分为两列-->
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>
+                <!--手机图标-->
+                <span class="fa-icon">
                 <i class="fa fa-mobile fa-lg"></i>
               </span>Your mobile office with
-            </h3>
+              </h3>
+            </div>
+            <div class="col-xs-12">
+              <h3><strong>ASUS EasyWork</strong></h3>
+            </div>
           </div>
-          <div class="col-xs-12">
-            <h3><strong>ASUS EasyWork</strong></h3>
+          <p>Any time. Anywhere.</p>
+          <!--下载用二维码-->
+          <div class="qr-code">
+            <p class="qr-code">扫描下方二维码获取（目前仅支持安卓机型）</p>
+            <img src="img/qr.png" alt="">
           </div>
         </div>
-        <p>Any time. Anywhere.</p>
-        <!--下载用二维码-->
-        <div class="qr-code">
-          <p class="qr-code">扫描下方二维码获取（目前仅支持Android机型）</p>
-          <img src="img/qr.png" alt="">
+        <!--右侧大效果图-->
+        <div id="slide-img" class="col-sm-6 col-xs-12">
+          <img src="img/new_slider-2.png" alt="">
         </div>
-      </div>
-      <!--右侧大效果图-->
-      <div id="slide-img" class="col-sm-6 col-xs-12">
-        <img src="img/new_slider-2.png" alt="">
       </div>
     </div>
   </div>
@@ -88,7 +91,7 @@
 <!--功能特色-->
 <div id="feature">
   <div class="container">
-    <div class="feature-heading">
+    <div class="feature-heading heading">
       <h2>功能特色</h2>
     </div>
     <!--6个功能-->
@@ -172,7 +175,7 @@
 <!--IT Mobile Portal-->
 <div id="mobile-portal">
   <div class="container">
-    <div class="mobile-portal-heading">
+    <div class="mobile-portal-heading heading">
       <h2>IT Mobile Portal</h2>
       <p class="sub-title">MIS努力开发各项多元APP，用来帮助同仁提高工作效率、使生活更便捷<br>利用您随身的智慧手机，创造更优质的华硕科技生活</p>
     </div>
@@ -301,9 +304,10 @@
     </div>
   </div>
 </div>
+<!--截图预览部分-->
 <div id="carousel-slider">
   <div class="container">
-    <div class="carousel-slider-heading">
+    <div class="carousel-slider-heading heading">
       <h2>预览</h2>
     </div>
     <div class="row carousel-slider-content">
@@ -340,11 +344,86 @@
     </div>
   </div>
 </div>
+<!--下载app-->
+<div id="download" class="parallax-img" data-parallax="scroll" data-speed="0.2" data-natural-width="1920" data-natural-height="1080" data-image-src="img/download-app-image.jpg">
+  <div class="bg-overlay">
+    <div class="container">
+      <div class="download-heading heading">
+        <h2>下载</h2>
+      </div>
+      <div class="qr-code">
+        <p class="qr-code">扫描下方二维码获取<br>（目前仅支持安卓机型）</p>
+        <img src="img/qr.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="faqs">
+  <div class="container">
+    <div class="faqs-heading heading">
+      <h2>FAQs</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" href="#faq1" class="panel-title"><i class="fa fa-plus"></i>1. ASUS EasyWork是什么？</a>
+            </div>
+            <div id="faq1" class="collapse panel-collapse">
+              <div class="panel-body">
+                <p>它是苏州MIS开发的一款移动端应用，包含了Skype for Business、Outlook等常用办公app。同时为了满足公司考勤需求，增加了定位打卡系统，方便外勤员工移动打卡。</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" href="#faq2" class="panel-title"><i class="fa fa-plus"></i>2. EasyWork与IT Mobile Portal、eForm的关系？</a>
+            </div>
+            <div id="faq2" class="collapse panel-collapse">
+              <div class="panel-body">
+                <p>IT Mobile Portal是早前台北MIS开发的移动办公应用，其中包含了eForm，而为了整合资源，方便员工使用，EasyWork将IT Mobile Portal包含了进来。</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" href="#faq3" class="panel-title"><i class="fa fa-plus"></i>3. EasyWork内置的打卡系统如何使用？</a>
+            </div>
+            <div id="faq3" class="collapse panel-collapse">
+              <div class="panel-body">
+                <p>详情可参考 <a href="/asus-easywork-sop.pdf"><i class="fa fa-file-pdf-o"></i>移动打卡系统SOP</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a data-toggle="collapse" href="#faq4" class="panel-title"><i class="fa fa-plus"></i>4. EasyWork支持iOS系统吗？</a>
+            </div>
+            <div id="faq4" class="collapse panel-collapse">
+              <div class="panel-body">
+                <p>很抱歉，目前仅支持安卓系统，iOS端正在研发中，敬请期待</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container">
+    <p>Copyright © 2017 ASUSTeK Computer Inc. All rights reserved.</p>
+  </div>
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.3.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/parallax.min.js"></script>
 <script src="js/my.js"></script>
 </body>
 </html>

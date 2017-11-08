@@ -3,9 +3,10 @@
 @android-color: #92b93a;
 @ios-color: #d55485;
 
+/**************公共样式*******************/
 body {
   font: 14px/1.5 '微软雅黑', Arial, Helvetica, sans-serif;
-  background: url("../img/header-app-image.jpg");
+  //background: url("../img/header-app-image.jpg");
   /**************全局icon样式****************/
   span.fa-icon {
     display: block;
@@ -23,14 +24,15 @@ body {
       transform: translate(-50%,-50%);
     }
   }
-  img {
-    max-width: 100%;
-  }
+  img {  max-width: 100%;  }
 }
+
 /*************各部分标题和标题后的短线****************/
-#feature , #mobile-portal , #carousel-slider{
-  //background-color: #fff;
+#feature , #mobile-portal , #carousel-slider , #download , #faqs{
   padding: 70px 0;
+  .heading {
+    margin-bottom: 40px;
+  }
   h2 {
     text-align: center;
     font-size: 34px;
@@ -45,7 +47,7 @@ body {
     }
   }
 }
-/************顶部导航栏***************/
+/************顶部导航栏*********************/
 #header {
   width: 100%;
   #my-menu li{
@@ -60,6 +62,7 @@ body {
   }
 
 }
+
 /**************中部标语、效果图**************/
 #main {
   width: 100%;
@@ -103,7 +106,8 @@ body {
     text-align: center;
   }
 }
-/**********功能特色**********/
+
+/**********功能特色*************************/
 #feature {
   background-color: #fff;
   //padding: 70px 0;
@@ -179,13 +183,14 @@ body {
   }
 
 }
-/**********IT Mobile Portal介绍**********/
+
+/**********IT Mobile Portal介绍*************/
 #mobile-portal {
   background-color: #F6F8FA;
   p.sub-title {
     text-align: center;
     color: @gray-text;
-    margin: 20px 0 60px;
+    margin: 20px 0 0;
   }
   .mobile-portal-item {
     margin-bottom: 35px;
@@ -268,7 +273,65 @@ body {
     }
   }
 }
-/**********carousel-slider***********/
+
+/**********截图预览carousel-slider***********/
 #carousel-slider {
   background-color: #fff;
+  padding-bottom: 90px;
+  .carousel-slider-content img {
+    border:1px solid #eee;
+  }
+}
+
+/****************下载app********************/
+#download {
+  //height: 426px;
+  padding: 0;
+  .bg-overlay {
+    padding: 70px 0;
+    background-color: rgba(0,0,0,.5);
+  }
+  h2 {
+    color: #fff;
+    &::after {
+      background-color: #fff;
+    }
+  }
+  .qr-code {
+    color:#fff;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/***************FAQs*******************/
+#faqs {
+  .panel-title {
+    display: block;
+    text-decoration: none;
+    color: #0f0f0f;
+    i {
+      color: @asus-color;
+      margin-right: 10px;
+    }
+  }
+  .panel-body {
+    p {
+      color: @gray-text;
+      font-size: 14px;
+      a { text-decoration: none; }
+
+    }
+  }
+}
+
+/****************页脚****************/
+#footer {
+  background-color: #353739;
+  color: #b3b3b1;
+  padding: 15px 0;
+  text-align: center;
+  p {
+    margin: 0;
+  }
 }

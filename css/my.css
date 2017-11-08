@@ -1,6 +1,6 @@
+/**************公共样式*******************/
 body {
   font: 14px/1.5 '微软雅黑', Arial, Helvetica, sans-serif;
-  background: url("../img/header-app-image.jpg");
   /**************全局icon样式****************/
 }
 body span.fa-icon {
@@ -25,19 +25,32 @@ body img {
 /*************各部分标题和标题后的短线****************/
 #feature,
 #mobile-portal,
-#carousel-slider {
+#carousel-slider,
+#download,
+#faqs {
   padding: 70px 0;
+}
+#feature .heading,
+#mobile-portal .heading,
+#carousel-slider .heading,
+#download .heading,
+#faqs .heading {
+  margin-bottom: 40px;
 }
 #feature h2,
 #mobile-portal h2,
-#carousel-slider h2 {
+#carousel-slider h2,
+#download h2,
+#faqs h2 {
   text-align: center;
   font-size: 34px;
   letter-spacing: .1em;
 }
 #feature h2::after,
 #mobile-portal h2::after,
-#carousel-slider h2::after {
+#carousel-slider h2::after,
+#download h2::after,
+#faqs h2::after {
   content: '';
   display: block;
   background-color: #0094f2;
@@ -45,7 +58,7 @@ body img {
   height: 3px;
   margin: 30px auto 0;
 }
-/************顶部导航栏***************/
+/************顶部导航栏*********************/
 #header {
   width: 100%;
 }
@@ -99,7 +112,7 @@ body img {
     text-align: center;
   }
 }
-/**********功能特色**********/
+/**********功能特色*************************/
 #feature {
   background-color: #fff;
   /************图标外的圆环*************/
@@ -161,14 +174,14 @@ body img {
     margin: 0 !important;
   }
 }
-/**********IT Mobile Portal介绍**********/
+/**********IT Mobile Portal介绍*************/
 #mobile-portal {
   background-color: #F6F8FA;
 }
 #mobile-portal p.sub-title {
   text-align: center;
   color: #868686;
-  margin: 20px 0 60px;
+  margin: 20px 0 0;
 }
 #mobile-portal .mobile-portal-item {
   margin-bottom: 35px;
@@ -245,7 +258,57 @@ body img {
   color: #868686;
   text-align: center;
 }
-/**********carousel-slider***********/
+/**********截图预览carousel-slider***********/
 #carousel-slider {
   background-color: #fff;
+  padding-bottom: 90px;
+}
+#carousel-slider .carousel-slider-content img {
+  border: 1px solid #eee;
+}
+/****************下载app********************/
+#download {
+  padding: 0;
+}
+#download .bg-overlay {
+  padding: 70px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#download h2 {
+  color: #fff;
+}
+#download h2::after {
+  background-color: #fff;
+}
+#download .qr-code {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+/***************FAQs*******************/
+#faqs .panel-title {
+  display: block;
+  text-decoration: none;
+  color: #0f0f0f;
+}
+#faqs .panel-title i {
+  color: #0094f2;
+  margin-right: 10px;
+}
+#faqs .panel-body p {
+  color: #868686;
+  font-size: 14px;
+}
+#faqs .panel-body p a {
+  text-decoration: none;
+}
+/****************页脚****************/
+#footer {
+  background-color: #353739;
+  color: #b3b3b1;
+  padding: 15px 0;
+  text-align: center;
+}
+#footer p {
+  margin: 0;
 }
