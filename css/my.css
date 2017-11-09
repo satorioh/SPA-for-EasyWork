@@ -22,6 +22,16 @@ body span.fa-icon i {
 body img {
   max-width: 100%;
 }
+body img.preload {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility .3s, opacity .3s;
+  transition: visibility .3s, opacity .3s;
+}
+body img.preload.loaded {
+  visibility: visible;
+  opacity: 1;
+}
 /*************各部分标题和标题后的短线****************/
 #feature,
 #mobile-portal,
@@ -57,6 +67,37 @@ body img {
   width: 80px;
   height: 3px;
   margin: 30px auto 0;
+}
+/***************悬浮导航栏******************/
+#navigation-affix {
+  position: fixed;
+  overflow: hidden;
+  top: -85px;
+  left: 0;
+  right: 0;
+  height: 85px;
+  z-index: 1000;
+  background-color: #fff;
+  -webkit-transition: top .3s ease;
+  transition: top .3s ease;
+}
+#navigation-affix #my-menu-affix li {
+  margin-right: 20px;
+}
+#navigation-affix #my-menu-affix li a {
+  font-size: 16px;
+  color: #000;
+}
+#navigation-affix #my-menu-affix li a:hover {
+  color: #0094f2;
+}
+#navigation-affix.show {
+  top: 0;
+}
+@media screen and (max-width: 768px) {
+  #navigation-affix {
+    display: none !important;
+  }
 }
 /************顶部导航栏*********************/
 #header {
@@ -161,7 +202,7 @@ body img {
 #feature #feature-right .feature-right-item .feature-right-text {
   text-align: left;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   #feature .feature-col .feature-item {
     text-align: center !important;
   }

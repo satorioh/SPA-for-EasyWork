@@ -12,7 +12,7 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/my.css">
@@ -25,6 +25,32 @@
 </head>
 <body>
 <div class="parallax-img" data-parallax="scroll" data-speed="0.2" data-natural-width="1920" data-natural-height="1080" data-image-src="img/header-app-image.jpg">
+  <div id="navigation-affix">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://221.224.163.13/">
+            <img src="img/logo.png">
+          </a>
+          <a data-toggle="collapse" href="#my-menu" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+        </div>
+        <div id="my-menu-affix" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="smooth-scroll" href="#my-menu">首页</a></li>
+            <li><a class="smooth-scroll" href="#feature">功能</a></li>
+            <li><a class="smooth-scroll" href="#mobile-portal">IT Mobile Portal</a></li>
+            <li><a class="smooth-scroll" href="#carousel-slider">预览</a></li>
+            <li><a class="smooth-scroll" href="#download">下载</a></li>
+            <li><a class="smooth-scroll" href="#faqs">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
   <!--顶部导航栏-->
   <div id="header">
     <nav class="navbar navbar-default">
@@ -41,12 +67,12 @@
         </div>
         <div id="my-menu" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#my-menu">首页</a></li>
-            <li><a href="#feature">功能</a></li>
-            <li><a href="#mobile-portal">IT Mobile Portal</a></li>
-            <li><a href="#carousel-slider">预览</a></li>
-            <li><a href="#">下载</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a class="smooth-scroll" href="#my-menu">首页</a></li>
+            <li><a class="smooth-scroll" href="#feature">功能</a></li>
+            <li><a class="smooth-scroll" href="#mobile-portal">IT Mobile Portal</a></li>
+            <li><a class="smooth-scroll" href="#carousel-slider">预览</a></li>
+            <li><a class="smooth-scroll" href="#download">下载</a></li>
+            <li><a class="smooth-scroll" href="#faqs">FAQs</a></li>
           </ul>
         </div>
       </div>
@@ -77,12 +103,12 @@
           <!--下载用二维码-->
           <div class="qr-code">
             <p class="qr-code">扫描下方二维码获取（目前仅支持安卓机型）</p>
-            <img src="img/qr.png" alt="">
+            <img class="animation" data-animation="fadeInLeft" src="img/qr.png" alt="">
           </div>
         </div>
         <!--右侧大效果图-->
         <div id="slide-img" class="col-sm-6 col-xs-12">
-          <img src="img/new_slider-2.png" alt="">
+          <img class="animation preload" data-animation="fadeInDown" src="img/new_slider-2.png" alt="">
         </div>
       </div>
     </div>
@@ -98,7 +124,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-4 feature-col" id="feature-left">
         <div class="feature-item feature-left-item">
-          <div class="icon-wrap-circle animated fadeInLeft">
+          <div class="icon-wrap-circle animation" data-animation="fadeInLeft">
             <span class="fa-icon">
               <i class="fa fa-skype"></i>
             </span>
@@ -109,7 +135,7 @@
           </div>
         </div>
         <div class="feature-item feature-left-item">
-          <div class="icon-wrap-circle animated fadeInLeft">
+          <div class="icon-wrap-circle animation" data-animation="fadeInLeft">
           <span class="fa-icon">
             <i class="fa fa-envelope"></i>
           </span>
@@ -120,7 +146,7 @@
           </div>
         </div>
         <div class="feature-item feature-left-item">
-          <div class="icon-wrap-circle animated fadeInLeft">
+          <div class="icon-wrap-circle animation" data-animation="fadeInLeft">
             <span class="fa-icon">
               <i class="fa fa-briefcase"></i>
             </span>
@@ -132,11 +158,11 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-4" id="feature-center">
-        <img src="img/3_mockup.jpg" alt="">
+        <img class="animation preload" data-animation="fadeInDown" src="img/3_mockup.jpg" alt="">
       </div>
       <div class="col-sm-12 col-md-4 feature-col" id="feature-right">
         <div class="feature-item feature-right-item">
-          <div class="icon-wrap-circle animated fadeInRight">
+          <div class="icon-wrap-circle animation" data-animation="fadeInRight">
           <span class="fa-icon">
             <i class="fa fa-globe"></i>
           </span>
@@ -147,7 +173,7 @@
           </div>
         </div>
         <div class="feature-item feature-right-item">
-          <div class="icon-wrap-circle animated fadeInRight">
+          <div class="icon-wrap-circle animation" data-animation="fadeInRight">
           <span class="fa-icon">
             <i class="fa fa-book"></i>
           </span>
@@ -158,7 +184,7 @@
           </div>
         </div>
         <div class="feature-item feature-right-item">
-          <div class="icon-wrap-circle animated fadeInRight">
+          <div class="icon-wrap-circle animation" data-animation="fadeInRight">
           <span class="fa-icon">
             <i class="fa fa-check"></i>
           </span>
@@ -181,7 +207,7 @@
     </div>
     <!--row 1-->
     <div class="row row1">
-      <div class="col-sm-12 col-md-4 mobile-portal-item">
+      <div class="col-sm-12 col-md-4 mobile-portal-item animation" data-animation="fadeInDown" data-delay="300">
         <div class="img-circle">
           <div class="img-wrap">
             <a href="http://appservice.asus.com/app_userguide/ITStore/index.html" target="_blank">
@@ -204,7 +230,7 @@
         <h3>ASUS IT Mobile Portal</h3>
         <p class="item-title">包含多种便利的应用程式</p>
       </div>
-      <div class="col-sm-12 col-md-4 mobile-portal-item">
+      <div class="col-sm-12 col-md-4 mobile-portal-item animation" data-animation="fadeInDown" data-delay="600">
         <div class="img-circle">
           <div class="img-wrap">
             <a href="http://appservice.asus.com/app_userguide/eForm/index.html" target="_blank">
@@ -230,7 +256,7 @@
         <h3>eForm(iOS/Android版)</h3>
         <p class="item-title">提供签核BPM、假单、员工资料查询</p>
       </div>
-      <div class="col-sm-12 col-md-4 mobile-portal-item">
+      <div class="col-sm-12 col-md-4 mobile-portal-item animation" data-animation="fadeInDown" data-delay="900">
         <div class="img-circle">
           <div class="img-wrap">
             <a href="http://appservice.asus.com/app_userguide/ITRSPlus/index.html" target="_blank">
@@ -310,36 +336,36 @@
     <div class="carousel-slider-heading heading">
       <h2>预览</h2>
     </div>
-    <div class="row carousel-slider-content">
+    <div class="row carousel-slider-content animation" data-animation="fadeInDown">
       <div class="col-sm-3">
-        <img src="img/screenshot_1.png" alt="">
+        <img class="preload" src="img/screenshot_1.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_2.png" alt="">
+        <img class="preload" src="img/screenshot_2.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_3.png" alt="">
+        <img class="preload" src="img/screenshot_3.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_4.png" alt="">
+        <img class="preload" src="img/screenshot_4.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_5.png" alt="">
+        <img class="preload" src="img/screenshot_5.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_6.png" alt="">
+        <img class="preload" src="img/screenshot_6.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_7.png" alt="">
+        <img class="preload" src="img/screenshot_7.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_8.png" alt="">
+        <img class="preload" src="img/screenshot_8.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_9.png" alt="">
+        <img class="preload" src="img/screenshot_9.png" alt="">
       </div>
       <div class="col-sm-3">
-        <img src="img/screenshot_10.png" alt="">
+        <img class="preload" src="img/screenshot_10.png" alt="">
       </div>
     </div>
   </div>
@@ -422,8 +448,13 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/response.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/parallax.min.js"></script>
+<script src="js/jquery.imgpreload.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<!--<script src="js/smooth-scroll.min.js"></script>-->
+<script src="js/jquery.waypoints.min.js"></script>
 <script src="js/my.js"></script>
 </body>
 </html>
